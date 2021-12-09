@@ -1,0 +1,11 @@
+#form {
+  width: 400px;
+  height: 400px;
+  background-color: darkgreen;
+  padding: 20px;;
+}
+
+#control {
+  width: 600px;
+  border: black;
+}
