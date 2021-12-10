@@ -1,0 +1,140 @@
+{
+  "coffees": [
+    {
+      "id": 1,
+      "name": "Blonde Roast Iced Coffee - Unsweetened",
+      "serving-size": 12,
+      "caffeine-content": 120,
+      "sugar-content": 0,
+      "favorite": false
+    },
+    {
+      "id": 2,
+      "name": "Dark Roast Iced Coffee - Unsweetened",
+      "serving-size": 12,
+      "caffeine-content": 220,
+      "sugar-content": 0,
+      "favorite": false
+    },
+    {
+      "id": 3,
+      "name": "Medium Roast Iced Coffee - Subtly Sweet",
+      "serving-size": 12,
+      "caffeine-content": 160,
+      "sugar-content": 12,
+      "favorite": false
+    },
+    {
+      "id": 4,
+      "name": "Medium Roast Iced Coffee - Unsweetened",
+      "serving-size": 12,
+      "caffeine-content": 160,
+      "sugar-content": 0,
+      "favorite": false
+    },
+    {
+      "id": 5,
+      "name": "Frappuccino - Large Mocha",
+      "serving-size": 13.7,
+      "caffeine-content": 105,
+      "sugar-content": 46,
+      "favorite": false
+    },
+    {
+      "id": 6,
+      "name": "Frappuccino - Small Mocha",
+      "serving-size": 9.5,
+      "caffeine-content": 70,
+      "sugar-content": 32,
+      "favorite": false
+    },
+    {
+      "id": 7,
+      "name": "Frappuccino - Large Vanilla",
+      "serving-size": 13.7,
+      "caffeine-content": 60,
+      "sugar-content": 46,
+      "favorite": false
+    },
+    {
+      "id": 8,
+      "name": "Frappuccino - Small Vanilla",
+      "serving-size": 9.5,
+      "caffeine-content": 45,
+      "sugar-content": 32,
+      "favorite": false
+    },
+    {
+      "id": 9,
+      "name": "x",
+      "serving-size": x,
+      "caffeine-content": x,
+      "sugar-content": x,
+      "favorite": false
+    },
+    {
+      "id": 10,
+      "name": "x",
+      "serving-size": x,
+      "caffeine-content": x,
+      "sugar-content": x,
+      "favorite": false
+    },
+    {
+      "id": 11,
+      "name": "x",
+      "serving-size": x,
+      "caffeine-content": x,
+      "sugar-content": x,
+      "favorite": false
+    },
+    {
+      "id": 6,
+      "name": "x",
+      "serving-size": x,
+      "caffeine-content": x,
+      "sugar-content": x,
+      "favorite": false
+    },
+    {
+      "id": 6,
+      "name": "x",
+      "serving-size": x,
+      "caffeine-content": x,
+      "sugar-content": x,
+      "favorite": false
+    },
+    {
+      "id": 6,
+      "name": "x",
+      "serving-size": x,
+      "caffeine-content": x,
+      "sugar-content": x,
+      "favorite": false
+    },
+    {
+      "id": 6,
+      "name": "x",
+      "serving-size": x,
+      "caffeine-content": x,
+      "sugar-content": x,
+      "favorite": false
+    },
+    {
+      "id": 6,
+      "name": "x",
+      "serving-size": x,
+      "caffeine-content": x,
+      "sugar-content": x,
+      "favorite": false
+    },
+    {
+      "id": 6,
+      "name": "x",
+      "serving-size": x,
+      "caffeine-content": x,
+      "sugar-content": x,
+      "favorite": false
+    },
+  ]
+}
