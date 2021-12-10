@@ -1,11 +1,34 @@
-#form {
-  width: 400px;
-  height: 400px;
-  background-color: darkgreen;
-  padding: 20px;;
+#controls {
+  width: 450px;
+  background-color: red;
+  /* border-width: 15px; */
+  padding-left: 100px;
 }
 
-#control {
-  width: 600px;
-  border: black;
+#title {
+  width: 370px;
+  height: 170px;
+  background-color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+#form {
+  width: 370px;
+  height: 370px;
+  background-color: darkgreen;
+  padding: 15px;;
+  text-align: center;
+}
+
+#info {
+    width: 370px;
+    height: 250px;
+    background-color: grey;
+    padding: 15px;
+    text-align: center;
+}
+
+h3 {
+  font: normal Sodo Sans;
 }
