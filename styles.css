@@ -1,8 +1,9 @@
 #controls {
-  width: 450px;
-  background-color: red;
-  /* border-width: 15px; */
-  padding-left: 100px;
+  width: 400px;
+  border-color: black;
+  border: solid;
+  padding: 15px;
+  background-color: brown;
 }
 
 #title {
@@ -30,5 +31,5 @@
 }
 
 h3 {
-  font: normal Sodo Sans;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
