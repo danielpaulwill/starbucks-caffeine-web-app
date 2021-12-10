@@ -15,31 +15,37 @@ function initFetch() {
 function cardCreator(array) {
   let cardArea = document.getElementById('cardArea')
   array.forEach(coffee => {
-    let coffeeInfo = document.createElement('li')
-      coffeeInfo.style = 'list-style: none;'
+    let coffeeInfo = document.createElement('div')
+      coffeeInfo.className = 'coffeeInfo'
+    // let coffeeSpan = document.createElement('span')  
     let coffeeCard = document.createElement('li')
-    coffeeCard.addEventListener('mouseover', e => console.log(e))
-      coffeeCard.style = 'list-style: none;'
+    coffeeCard.addEventListener('mouseover', e => coffeeInfo.style.display = 'block')
+    coffeeCard.addEventListener('mouseleave', e => coffeeInfo.style.display = 'none')
       coffeeCard.className = 'coffeeCard'
-    // let coffeeTitle = document.createElement('h5')
-    //   coffeeTitle.innerText = coffee.name
-    //   coffeeCard.append(coffeeTitle)
+    let coffeeTitle = document.createElement('h5')
+      coffeeTitle.innerText = coffee.name
+      coffeeInfo.append(coffeeTitle)
+    let coffeeImgLi = document.createElement('div')
+      coffeeImgLi.className = 'coffeeCardImage'
     let coffeeImage = document.createElement('img')
-      coffeeImage.className = 'coffeeCardImage'
+      // coffeeImage.className = 'coffeeCardImage'
       coffeeImage.src = coffee.image
-      coffeeCard.append(coffeeImage)
-    // let coffeeServing = document.createElement('p')
-    //   coffeeServing.innerText = `Serving Size: ${coffee.servingSize} fl oz`
-    //   coffeeCard.append(coffeeServing)
-    // let coffeeCaffeine = document.createElement('p')
-    //   coffeeCaffeine.innerText = coffee.caffeineContent
-    //   coffeeCard.append(coffeeCaffeine)
-    // let coffeeSugar = document.createElement('p')
-    //   coffeeSugar.innerText = coffee.sugarContent
-    //   coffeeCard.append(coffeeSugar)
+      coffeeImgLi.append(coffeeImage)
+      coffeeCard.append(coffeeImgLi)
+    let coffeeServing = document.createElement('p')
+      coffeeServing.innerText = `Serving Size: ${coffee.servingSize} fl oz`
+      coffeeInfo.append(coffeeServing)
+    let coffeeCaffeine = document.createElement('p')
+      coffeeCaffeine.innerText = coffee.caffeineContent
+      coffeeInfo.append(coffeeCaffeine)
+    let coffeeSugar = document.createElement('p')
+      coffeeSugar.innerText = coffee.sugarContent
+      coffeeInfo.append(coffeeSugar)
     console.log(coffeeCard)
     let lineBreak = document.createElement('br')
     cardArea.append(lineBreak)
+    coffeeCard.append(coffeeInfo)
+    // coffeeCard.append(coffeeSpan)
     cardArea.append(coffeeCard)
     return coffeeCard
   })

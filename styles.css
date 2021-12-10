@@ -49,13 +49,14 @@ main {
 } */
 
 .coffeeCard {
-  width: 250px;
-  height: 250px;
+  list-style: none;
+  /* width: 250px;
+  height: 250px; */
   border: 1px solid black;
   background-color: grey;
 }
 
-.coffeeCardImage {
+img {
   /* position: relative; */
   /* top: 10%; */
   /* display: block; */
@@ -66,3 +67,9 @@ main {
   margin-top: auto;
   margin-bottom: auto; */
 }
+
+.coffeeInfo {
+  list-style: none;
+  display: none;
+}
+
