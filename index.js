@@ -12,12 +12,13 @@ function initFetch() {
   .then(data => cardCreator(data))
 }
 
-const cardArea = document.getElementById('cardArea')
+
 
 function cardCreator(array) {
+  let cardArea = document.getElementById('cardArea')
   array.forEach(coffee => {
-    // console.log(coffee.servingSize)
     let coffeeCard = document.createElement('li')
+      coffeeCard.className = 'coffeeCard'
     let coffeeTitle = document.createElement('h5')
       coffeeTitle.innerText = coffee.name
       coffeeCard.append(coffeeTitle)
@@ -26,7 +27,7 @@ function cardCreator(array) {
       coffeeImage.src = coffee.image
       coffeeCard.append(coffeeImage)
     let coffeeServing = document.createElement('p')
-      coffeeServing.innerText = coffee.servingSize
+      coffeeServing.innerText = `Serving Size: ${coffee.servingSize} fl oz`
       coffeeCard.append(coffeeServing)
     let coffeeCaffeine = document.createElement('p')
       coffeeCaffeine.innerText = coffee.caffeineContent
@@ -36,6 +37,7 @@ function cardCreator(array) {
       coffeeCard.append(coffeeSugar)
     console.log(coffeeCard)
     cardArea.append(coffeeCard)
+    return coffeeCard
   })
 }
 
