@@ -3,6 +3,7 @@
   border-color: black;
   border: solid;
   padding: 15px;
+  float: left;
   background-color: brown;
 }
 
@@ -32,4 +33,17 @@
 
 h3 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#card-area {
+  width: 1490px;
+  height: 910px;
+  float: auto;
+  background-color: burlywood;
+}
+
+main {
+  width: 1920px;
+  height: 910px;
+  background-color: red;
 }
