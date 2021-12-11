@@ -92,7 +92,7 @@ img {
   list-style: none;
   display: none;
   float: right;
-  padding-top: 20px;
+  padding-top: 10px;
   /* background-color: tomato; */
 }
 
@@ -100,4 +100,9 @@ img {
   width: 80px;
   height: 80px;
   float: none;
+}
+
+.favButton {
+  height: 30px;
+  width: 30px;
 }
