@@ -16,31 +16,31 @@ function initFetch() {
 function cardCreator(array) {
   let cardArea = document.getElementById('cardArea')
   array.forEach(coffee => {
-    let coffeeInfo = document.createElement('div')
+    let coffeeInfo = elementMaker('div')
       coffeeInfo.className = 'coffeeInfo'
-    let coffeeCard = document.createElement('li')
+    let coffeeCard = elementMaker('li')
     coffeeCard.addEventListener('mouseover', e => coffeeInfo.style.display = 'block')
     coffeeCard.addEventListener('mouseleave', e => coffeeInfo.style.display = 'none')
       coffeeCard.className = 'coffeeCard'
-    let coffeeTitle = document.createElement('h5')
+    let coffeeTitle = elementMaker('h5')
       coffeeTitle.innerText = coffee.name
       coffeeInfo.append(coffeeTitle)
-    let coffeeImgLi = document.createElement('div')
+    let coffeeImgLi = elementMaker('div')
       coffeeImgLi.className = 'coffeeCardImage'
-    let coffeeImage = document.createElement('img')
+    let coffeeImage = elementMaker('img')
       coffeeImage.src = coffee.image
       coffeeImgLi.append(coffeeImage)
       coffeeCard.append(coffeeImgLi)
-    let coffeeServing = document.createElement('p')
+    let coffeeServing = elementMaker('p')
       coffeeServing.innerHTML = `<b>Serving Size:</b> ${coffee.servingSize} fl oz`
       coffeeInfo.append(coffeeServing)
-    let coffeeCaffeine = document.createElement('p')
+    let coffeeCaffeine = elementMaker('p')
       coffeeCaffeine.innerHTML = `<b>Caffeine Content:</b> ${coffee.caffeineContent}mg`
       coffeeInfo.append(coffeeCaffeine)
-    let coffeeSugar = document.createElement('p')
+    let coffeeSugar = elementMaker('p')
       coffeeSugar.innerHTML = `<b>Sugar Content:</b> ${coffee.sugarContent}g`
       coffeeInfo.append(coffeeSugar)
-    let lineBreak = document.createElement('br')
+    let lineBreak = elementMaker('br')
     coffeeCard.append(coffeeInfo)
     cardArea.append(coffeeCard)
     cardArea.append(lineBreak)
@@ -59,3 +59,8 @@ function newSelection (value) {
       }})
     cardCreator(coffeeArray)
   })}
+
+  function elementMaker(elementType) {
+    let element = document.createElement(`${elementType}`)
+    return element
+  }
