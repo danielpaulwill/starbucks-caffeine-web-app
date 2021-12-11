@@ -2,9 +2,11 @@ document.addEventListener('DOMContentLoaded', e => init())
 
 function init() {
   console.log('Time to wake up!')
+  let coffeeCategoryMenu = document.getElementById('select')
+  coffeeCategoryMenu.addEventListener('change', e => console.log(e.target.value))
   initFetch()
-  cardCreator()
 }
+
 
 function initFetch() {
   fetch('http://localhost:3000/coffee')
@@ -17,7 +19,6 @@ function cardCreator(array) {
   array.forEach(coffee => {
     let coffeeInfo = document.createElement('div')
       coffeeInfo.className = 'coffeeInfo'
-    // let coffeeSpan = document.createElement('span')  
     let coffeeCard = document.createElement('li')
     coffeeCard.addEventListener('mouseover', e => coffeeInfo.style.display = 'block')
     coffeeCard.addEventListener('mouseleave', e => coffeeInfo.style.display = 'none')
@@ -28,26 +29,26 @@ function cardCreator(array) {
     let coffeeImgLi = document.createElement('div')
       coffeeImgLi.className = 'coffeeCardImage'
     let coffeeImage = document.createElement('img')
-      // coffeeImage.className = 'coffeeCardImage'
       coffeeImage.src = coffee.image
       coffeeImgLi.append(coffeeImage)
       coffeeCard.append(coffeeImgLi)
     let coffeeServing = document.createElement('p')
-      coffeeServing.innerText = `Serving Size: ${coffee.servingSize} fl oz`
+      coffeeServing.innerHTML = `<b>Serving Size:</b> ${coffee.servingSize} fl oz`
       coffeeInfo.append(coffeeServing)
     let coffeeCaffeine = document.createElement('p')
-      coffeeCaffeine.innerText = coffee.caffeineContent
+      coffeeCaffeine.innerHTML = `<b>Caffeine Content:</b> ${coffee.caffeineContent}mg`
       coffeeInfo.append(coffeeCaffeine)
     let coffeeSugar = document.createElement('p')
-      coffeeSugar.innerText = coffee.sugarContent
+      coffeeSugar.innerHTML = `<b>Sugar Content:</b> ${coffee.sugarContent}g`
       coffeeInfo.append(coffeeSugar)
-    console.log(coffeeCard)
     let lineBreak = document.createElement('br')
-    cardArea.append(lineBreak)
     coffeeCard.append(coffeeInfo)
-    // coffeeCard.append(coffeeSpan)
     cardArea.append(coffeeCard)
-    return coffeeCard
+    cardArea.append(lineBreak)
+    // return coffeeCard
   })
 }
 
+// function submitForm() {
+//     document.querySelector('form').reset()
+//   }

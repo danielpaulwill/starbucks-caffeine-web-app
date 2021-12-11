@@ -1,10 +1,26 @@
-/* #controls {
+#controlBar {
+  height: 4300px;
   width: 400px;
-  border-color: black;
-  border: solid;
-  padding: 15px;
+  /* background-color: lawngreen; */
   float: left;
-  background-color: brown;
+}
+
+#controls {
+  /* height: 9300px; */
+  border: solid black;
+  float: left;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#cardArea {
+  width: 1490px;
+  height: 910px;
+  float: left;
+  /* background-color: burlywood; */
+  /* border-color: black;
+  border: solid; */
 }
 
 #title {
@@ -16,11 +32,14 @@
 }
 
 #form {
-  width: 370px;
+  width: 315px;
   height: 370px;
   background-color: darkgreen;
-  padding: 15px;;
-  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 70px;
+  text-align: justify;
 }
 
 #info {
@@ -35,25 +54,25 @@ h3 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#card-area {
-  width: 1490px;
-  height: 910px;
-  float: auto;
-  background-color: burlywood;
-}
 
 main {
   width: 1920px;
   height: 910px;
-  background-color: red;
-} */
+  /* background-color: red; */
+}
+
+
+
+/* --------------------------------------------------------- */
+
+
 
 .coffeeCard {
   list-style: none;
-  /* width: 250px;
-  height: 250px; */
-  border: 1px solid black;
-  background-color: grey;
+  width: 500px;
+  height: 250px;
+  float: left;
+  /* border: 1px solid black; */
 }
 
 img {
@@ -62,6 +81,8 @@ img {
   /* display: block; */
   width: 250px;
   height: 250px;
+  float: left;
+  /* float: left; */
   /* margin-left: auto;
   margin-right: auto;
   margin-top: auto;
@@ -69,7 +90,12 @@ img {
 }
 
 .coffeeInfo {
+  width: 250px;
+  height: 250px;
   list-style: none;
   display: none;
+  float: right;
+  padding-top: 40px;
+  /* background-color: tomato; */
 }
 
