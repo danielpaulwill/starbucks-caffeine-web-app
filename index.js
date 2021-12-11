@@ -115,18 +115,16 @@ function elementMaker(elementType) {
 
 function favButtonSwitch(coffee, favButton) {
   coffee.favorite = !coffee.favorite
-      favButtonType(coffee, favButton)
+  fetch(`http://localhost:3000/coffee/${coffee.id}`, {
+  method: "PATCH",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  },
+  body: JSON.stringify({
+    favorite: coffee.favorite}),
+  })
+  .then(response => response.json())
+  .then(data => console.log(data.favorite)),
+  favButtonType(coffee, favButton)
 }
-
-// function fetchPost(coff) {
-//   fetch(`http://localhost:3000/coffee/${coff.id}`, {
-//   method: "PATCH",
-//   headers: {
-//     "Content-Type": "application/json",
-//     Accept: "application/json",
-//   },
-//   body: JSON.stringify({
-//     favorite: coff.favorite})
-//   // .then(response => response.json())
-//   // .then(data => console.log(data))
-// })}
