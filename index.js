@@ -3,7 +3,12 @@ document.addEventListener('DOMContentLoaded', e => init())
 function init() {
   console.log('Time to wake up!')
   let coffeeCategoryMenu = document.getElementById('select')
-  coffeeCategoryMenu.addEventListener('change', e => newSelection(e.target.value))
+  coffeeCategoryMenu.addEventListener('change', e => {
+    if (e.target.value === 'start') {
+      document.getElementById('cardArea').innerHTML = ''
+      initFetch()
+    } else {newSelection(e.target.value)}
+  })
   initFetch()
 }
 
@@ -56,7 +61,8 @@ function newSelection (value) {
     data.forEach(coffee => {
       if (coffee.coffeeCategory === value) {
         coffeeArray.push(coffee)
-      }})
+      }
+    })
     cardCreator(coffeeArray)
   })}
 
