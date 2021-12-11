@@ -14,7 +14,7 @@ function selectInput() {
       initFetch()
     } else if (e.target.value === 'favorite') {
       favoriteSelection()
-    } else {newSelection(e.target.value)}
+    } else newSelection(e.target.value)
   })
 }
 
@@ -46,11 +46,7 @@ function cardCreator(array) {
   array.forEach(coffee => {
     let favButton = favoriteButton(coffee)
     favButton.className = 'favButton'
-    favButton.addEventListener('click', e => {
-      coffee.favorite = !coffee.favorite
-      favoriteButton(coffee)
-      favButtonType(coffee, favButton)
-  })
+    favButton.addEventListener('click', e => favButtonSwitch(coffee, favButton))
     let coffeeInfo = elementMaker('div')
       coffeeInfo.className = 'coffeeInfo'
     let coffeeCard = elementMaker('li')
@@ -81,7 +77,6 @@ function cardCreator(array) {
     coffeeCard.append(coffeeInfo)
     cardArea.append(coffeeCard)
     coffeeCard.append(lineBreak)
-    console.log(favButton)
   })
 }
 
@@ -97,7 +92,7 @@ function newSelection (value) {
       }
     })
     cardCreator(coffeeArray)
-  })}
+})}
 
 function favoriteSelection() {
   document.getElementById('cardArea').innerHTML = ''
@@ -115,5 +110,22 @@ function favoriteSelection() {
 function elementMaker(elementType) {
     let element = document.createElement(`${elementType}`)
     return element
-  }
+}
 
+function favButtonSwitch(coffee, favButton) {
+  coffee.favorite = !coffee.favorite
+      favButtonType(coffee, favButton)
+}
+
+// function fetchPost(coff) {
+//   fetch(`http://localhost:3000/coffee/${coff.id}`, {
+//   method: "PATCH",
+//   headers: {
+//     "Content-Type": "application/json",
+//     Accept: "application/json",
+//   },
+//   body: JSON.stringify({
+//     favorite: coff.favorite})
+//   // .then(response => response.json())
+//   // .then(data => console.log(data))
+// })}
