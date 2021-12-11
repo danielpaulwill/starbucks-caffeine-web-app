@@ -3,10 +3,9 @@ document.addEventListener('DOMContentLoaded', e => init())
 function init() {
   console.log('Time to wake up!')
   let coffeeCategoryMenu = document.getElementById('select')
-  coffeeCategoryMenu.addEventListener('change', e => console.log(e.target.value))
+  coffeeCategoryMenu.addEventListener('change', e => newSelection(e.target.value))
   initFetch()
 }
-
 
 function initFetch() {
   fetch('http://localhost:3000/coffee')
@@ -45,10 +44,18 @@ function cardCreator(array) {
     coffeeCard.append(coffeeInfo)
     cardArea.append(coffeeCard)
     cardArea.append(lineBreak)
-    // return coffeeCard
   })
 }
 
-// function submitForm() {
-//     document.querySelector('form').reset()
-//   }
+function newSelection (value) {
+  document.getElementById('cardArea').innerHTML = ''
+  let coffeeArray = []
+  fetch('http://localhost:3000/coffee')
+  .then(res => res.json())
+  .then(data => {
+    data.forEach(coffee => {
+      if (coffee.coffeeCategory === value) {
+        coffeeArray.push(coffee)
+      }})
+    cardCreator(coffeeArray)
+  })}
