@@ -40,9 +40,8 @@ function cardCreator(array) {
   array.forEach(coffee => {
     let favButton = favoriteButton(coffee)
     favButton.addEventListener('click', e => {
-      console.log(coffee.favorite)
       coffee.favorite = !coffee.favorite
-      console.log(coffee.favorite)
+      favoriteButton()
     })
     let coffeeInfo = elementMaker('div')
       coffeeInfo.className = 'coffeeInfo'
