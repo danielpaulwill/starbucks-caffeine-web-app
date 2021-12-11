@@ -19,8 +19,8 @@
   height: 910px;
   float: left;
   /* background-color: burlywood; */
-  /* border-color: black;
-  border: solid; */
+  /* border-color: black; */
+  /* border: solid; */
 }
 
 #title {
@@ -92,7 +92,7 @@ img {
   list-style: none;
   display: none;
   float: right;
-  padding-top: 30px;
+  padding-top: 20px;
   /* background-color: tomato; */
 }
 

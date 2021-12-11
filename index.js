@@ -2,15 +2,20 @@ document.addEventListener('DOMContentLoaded', e => init())
 
 function init() {
   console.log('Time to wake up!')
+  selectInput()
+  initFetch()
+}
+
+function selectInput() {
   let coffeeCategoryMenu = document.getElementById('select')
   coffeeCategoryMenu.addEventListener('change', e => {
     if (e.target.value === 'start') {
       document.getElementById('cardArea').innerHTML = ''
       initFetch()
+    } else if (e.target.value === 'favorite') {
+      favoriteSelection()
     } else {newSelection(e.target.value)}
-  })
-  initFetch()
-}
+  })}
 
 function initFetch() {
   fetch('http://localhost:3000/coffee')
@@ -18,9 +23,27 @@ function initFetch() {
   .then(data => cardCreator(data))
 }
 
+function favoriteButton(coffee) {
+  let favButton = elementMaker('button')
+  if (coffee.favorite === true) {
+    favButton.innerHTML = '♥'
+    favButton.style.color = 'red'
+  } else if (coffee.favorite === false) {
+    favButton.innerHTML = '♡'
+    favButton.style.color = 'red'
+  }
+  return favButton
+}
+
 function cardCreator(array) {
   let cardArea = document.getElementById('cardArea')
   array.forEach(coffee => {
+    let favButton = favoriteButton(coffee)
+    favButton.addEventListener('click', e => {
+      console.log(coffee.favorite)
+      coffee.favorite = !coffee.favorite
+      console.log(coffee.favorite)
+    })
     let coffeeInfo = elementMaker('div')
       coffeeInfo.className = 'coffeeInfo'
     let coffeeCard = elementMaker('li')
@@ -46,9 +69,11 @@ function cardCreator(array) {
       coffeeSugar.innerHTML = `<b>Sugar Content:</b> ${coffee.sugarContent}g`
       coffeeInfo.append(coffeeSugar)
     let lineBreak = elementMaker('br')
+    coffeeInfo.append(favButton)
     coffeeCard.append(coffeeInfo)
     cardArea.append(coffeeCard)
-    cardArea.append(lineBreak)
+    coffeeCard.append(lineBreak)
+    console.log(favButton)
   })
 }
 
@@ -66,7 +91,21 @@ function newSelection (value) {
     cardCreator(coffeeArray)
   })}
 
-  function elementMaker(elementType) {
+function favoriteSelection() {
+  document.getElementById('cardArea').innerHTML = ''
+  let coffeeArray = []
+  fetch('http://localhost:3000/coffee')
+  .then(res => res.json())
+  .then(data => {
+    data.forEach(coffee => {
+      if (coffee.favorite === true) {
+        coffeeArray.push(coffee)
+    }})
+  cardCreator(coffeeArray)
+})}
+
+function elementMaker(elementType) {
     let element = document.createElement(`${elementType}`)
     return element
   }
+
