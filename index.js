@@ -9,6 +9,7 @@ function init() {
 function selectInput() {
   let coffeeCategoryMenu = document.getElementById('select')
   coffeeCategoryMenu.addEventListener('change', e => {
+    scrollTo(0, 0)
     if (e.target.value === 'start') {
       document.getElementById('cardArea').innerHTML = ''
       initFetch()
