@@ -48,14 +48,7 @@ function cardCreator(array) {
     favButton.addEventListener('click', e => {
       coffee.favorite = !coffee.favorite
       favoriteButton(coffee)
-    //   if (coffee.favorite === true) {
-    //     favButton.innerHTML = '♥'
-    //     favButton.style.color = 'red'
-    //   } else if (coffee.favorite === false) {
-    //     favButton.innerHTML = '♡'
-    //     favButton.style.color = 'red'
-    // }
-    // favButtonType(coffee, favButton)
+      favButtonType(coffee, favButton)
   })
     let coffeeInfo = elementMaker('div')
       coffeeInfo.className = 'coffeeInfo'

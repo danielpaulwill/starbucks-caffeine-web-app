@@ -26,7 +26,7 @@
 #title {
   width: 370px;
   height: 170px;
-  background-color: white;
+  background-color: #F2F0EB;
   padding: 15px;
   text-align: center;
 }
@@ -34,7 +34,7 @@
 #form {
   width: 315px;
   height: 370px;
-  background-color: darkgreen;
+  background-color: #165C38;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-right: 15px;
@@ -45,7 +45,7 @@
 #info {
     width: 370px;
     height: 250px;
-    background-color: grey;
+    background-color: #D8E8E2;
     padding: 15px;
     text-align: center;
 }
