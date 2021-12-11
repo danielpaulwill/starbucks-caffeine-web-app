@@ -57,6 +57,7 @@ function cardCreator(array) {
     coffeeCard.addEventListener('mouseover', e => coffeeInfo.style.display = 'block')
     coffeeCard.addEventListener('mouseleave', e => coffeeInfo.style.display = 'none')
       coffeeCard.className = 'coffeeCard'
+      coffeeCard.id = coffee.id
     let coffeeTitle = elementMaker('h5')
       coffeeTitle.innerText = coffee.name
       coffeeInfo.append(coffeeTitle)
