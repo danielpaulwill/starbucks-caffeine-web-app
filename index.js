@@ -15,7 +15,8 @@ function selectInput() {
     } else if (e.target.value === 'favorite') {
       favoriteSelection()
     } else {newSelection(e.target.value)}
-  })}
+  })
+}
 
 function initFetch() {
   fetch('http://localhost:3000/coffee')
@@ -25,6 +26,11 @@ function initFetch() {
 
 function favoriteButton(coffee) {
   let favButton = elementMaker('button')
+  favButtonType(coffee, favButton)
+  return favButton
+}
+
+function favButtonType(coffee, favButton) {
   if (coffee.favorite === true) {
     favButton.innerHTML = '♥'
     favButton.style.color = 'red'
@@ -32,7 +38,7 @@ function favoriteButton(coffee) {
     favButton.innerHTML = '♡'
     favButton.style.color = 'red'
   }
-  return favButton
+return favButton
 }
 
 function cardCreator(array) {
@@ -41,8 +47,16 @@ function cardCreator(array) {
     let favButton = favoriteButton(coffee)
     favButton.addEventListener('click', e => {
       coffee.favorite = !coffee.favorite
-      favoriteButton()
-    })
+      favoriteButton(coffee)
+    //   if (coffee.favorite === true) {
+    //     favButton.innerHTML = '♥'
+    //     favButton.style.color = 'red'
+    //   } else if (coffee.favorite === false) {
+    //     favButton.innerHTML = '♡'
+    //     favButton.style.color = 'red'
+    // }
+    // favButtonType(coffee, favButton)
+  })
     let coffeeInfo = elementMaker('div')
       coffeeInfo.className = 'coffeeInfo'
     let coffeeCard = elementMaker('li')
