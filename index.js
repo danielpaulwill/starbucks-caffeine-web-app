@@ -10,8 +10,8 @@ function selectInput() {
   let coffeeCategoryMenu = document.getElementById('select')
   coffeeCategoryMenu.addEventListener('change', e => {
     scrollTo(0, 0)
+    document.getElementById('cardArea').innerHTML = ''
     if (e.target.value === 'start') {
-      document.getElementById('cardArea').innerHTML = ''
       initFetch()
     } else if (e.target.value === 'favorite') {
       favoriteSelection()
@@ -82,7 +82,6 @@ function cardCreator(array) {
 }
 
 function newSelection (value) {
-  document.getElementById('cardArea').innerHTML = ''
   let coffeeArray = []
   fetch('http://localhost:3000/coffee')
   .then(res => res.json())
@@ -96,7 +95,6 @@ function newSelection (value) {
 })}
 
 function favoriteSelection() {
-  document.getElementById('cardArea').innerHTML = ''
   let coffeeArray = []
   fetch('http://localhost:3000/coffee')
   .then(res => res.json())
