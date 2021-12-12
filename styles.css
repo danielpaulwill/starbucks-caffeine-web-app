@@ -1,13 +1,11 @@
 #controlBar {
   height: 4300px;
   width: 400px;
-  /* background-color: lawngreen; */
   float: left;
 }
 
 #controls {
-  /* height: 9300px; */
-  border: solid black;
+  border: 1px solid black;
   float: left;
   position: fixed;
   top: 0;
@@ -49,7 +47,7 @@
     height: 250px;
     background-color: #D8E8E2;
     padding: 15px;
-    text-align: left;
+    /* text-align: left; */
 }
 
 h2 {
