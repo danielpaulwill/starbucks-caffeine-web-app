@@ -15,8 +15,8 @@
 }
 
 #cardArea {
-  width: 1490px;
-  height: 910px;
+  width: 1000px;
+  /* height: 910px; */
   float: left;
   /* background-color: burlywood; */
   /* border-color: black; */
@@ -52,8 +52,18 @@
     text-align: center;
 }
 
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
 h3 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h4 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  float: left;
 }
 
 h5 {
@@ -72,20 +82,6 @@ main {
   height: 250px;
   float: left;
   /* border: 1px solid black; */
-}
-
-img {
-  /* position: relative; */
-  /* top: 10%; */
-  /* display: block; */
-  width: 250px;
-  height: 250px;
-  float: left;
-  /* float: left; */
-  /* margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto; */
 }
 
 .coffeeInfo {
@@ -107,4 +103,14 @@ img {
 .favButton {
   height: 30px;
   width: 30px;
+}
+
+.coffeeCardImage {
+  width: 250px;
+  height: 250px;
+  float: left;
+}
+
+#infoMug {
+width: 80px;
 }

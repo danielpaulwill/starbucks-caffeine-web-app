@@ -59,8 +59,8 @@ function cardCreator(array) {
       coffeeTitle.innerText = coffee.name
       coffeeInfo.append(coffeeTitle)
     let coffeeImgLi = elementMaker('div')
-      coffeeImgLi.className = 'coffeeCardImage'
     let coffeeImage = elementMaker('img')
+    coffeeImage.className = 'coffeeCardImage'
       coffeeImage.src = coffee.image
       coffeeImgLi.append(coffeeImage)
       coffeeCard.append(coffeeImgLi)
