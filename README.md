@@ -42,6 +42,9 @@ Possible future releases
 CONTRIBUTION
 Not open to contribution.
 
+CREDITS
+All coffee images used are from https://www.pepsicobeveragefacts.com/
+
 
 MIT License
 
